@@ -1,6 +1,4 @@
-random
 pyautogui.auto
-time
 bs4
 html5lib
 pynput
