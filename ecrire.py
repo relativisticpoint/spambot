@@ -6,7 +6,7 @@ import codecs
 
 def write():
     counter=0
-    f = open('./sentences.txt','r',encoding='utf-8')
+    f = open('./jokes.txt','r',encoding='utf-8')
     #Other way of writing the sentences using a simulated keyboard input to handle unicode characters
     kb = keyboard.Controller()
     messages = f.readlines()
