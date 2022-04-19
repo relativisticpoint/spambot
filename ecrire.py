@@ -3,10 +3,10 @@ import pyautogui as auto
 from pynput import *
 import random
 import codecs
-
-def write():
-    counter=0
-    f = open('./jokes.txt','r',encoding='utf-8')
+import sys
+def write(fichier):
+    fichier = './'+fichier+'.txt'
+    f = open(fichier,'r',encoding='utf-8')
     #Other way of writing the sentences using a simulated keyboard input to handle unicode characters
     kb = keyboard.Controller()
     messages = f.readlines()
@@ -15,8 +15,17 @@ def write():
         kb.type(line)
         auto.press("enter")
         time.sleep(0.5)   
-    print(counter)
 
 if __name__ == "__main__":
     time.sleep(5)
-    write()
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "fr":
+            write('jokes')
+        elif sys.argv[1] == "eng":
+            write('common')
+        elif sys.argv[1] == "all":
+            write('common')
+            write('jokes')
+    else:
+        write('common')
+        write('jokes')
