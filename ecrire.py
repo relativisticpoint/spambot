@@ -1,5 +1,5 @@
 import time
-import pyautogui as auto
+import pyautogui as spambot
 from pynput import *
 import random
 import codecs
@@ -10,22 +10,24 @@ def write(fichier):
     #Other way of writing the sentences using a simulated keyboard input to handle unicode characters
     kb = keyboard.Controller()
     messages = f.readlines()
+    f.close()
     for line in messages:
-        
         kb.type(line)
-        auto.press("enter")
+        spambot.press("enter")
         time.sleep(0.5)   
 
 if __name__ == "__main__":
     time.sleep(5)
     if len(sys.argv) > 1:
         if sys.argv[1] == "fr":
-            write('jokes')
+            write('sentences')
         elif sys.argv[1] == "eng":
-            write('common')
-        elif sys.argv[1] == "all":
-            write('common')
             write('jokes')
+        elif sys.argv[1] == "all":
+            write('sentences')
+            write('jokes')
+            write('common')
     else:
         write('common')
         write('jokes')
+        write('sentences')
