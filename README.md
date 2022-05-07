@@ -1,6 +1,6 @@
 # spambot
 # mailbot
-mailbot is a mail bot that has two functionnalities : sending e-mails and spamming someone given their e-mail address
+mailbot is a mail bot that has two functionnalities : **sending e-mails** and **spamming someone given their e-mail address**
 ## Using mailbot to send an e-mail :
 Execute the following script and pass as a parameter in this order : **the content of the e-mail** and the **receiver's e-mail address** as shown in the following syntax :
 ```
@@ -27,3 +27,9 @@ in this case, all you'll have to do to spam someone is the following :
 ```
 $ ./spam lilywolf272@gmail.com
 ```
+## Requirements :
+- the [quick-mailer](https://pypi.org/project/quick-mailer/) library that can be installed using pip :
+```
+$ pip install quick-mailer
+```
+
