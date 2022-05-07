@@ -7,7 +7,7 @@ lily = Mailer(email='lilywolf272@gmail.com',
 
 def spam(mess,rec):
 
-    # mess += "this was sent from the relativisticpointXsamaritan spambot"
+    # mess += "this was sent from the relativisticpoint X samaritan spambot"
     lily.send(receiver=rec,  # Email From Any service Provider
             no_reply='hsami272@gmail.com', # Redirect receiver to another email when try to reply.
             subject='test-bot',
