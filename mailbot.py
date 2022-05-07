@@ -2,13 +2,13 @@ from email import message
 from mailer import Mailer
 import sys
 
-mail = Mailer(email='lilywolf272@gmail.com',
+lily = Mailer(email='lilywolf272@gmail.com',
               password='lilydog123')
 
 def spam(mess,rec):
 
     # mess += "this was sent from the relativisticpointXsamaritan spambot"
-    mail.send(receiver=rec,  # Email From Any service Provider
+    lily.send(receiver=rec,  # Email From Any service Provider
             no_reply='hsami272@gmail.com', # Redirect receiver to another email when try to reply.
             subject='test-bot',
             message= mess)
