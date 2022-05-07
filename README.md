@@ -25,7 +25,7 @@ $ chmod 777 spam
 ```
 in this case, all you'll have to do to spam someone is the following :
 ```
-$ ./spam lilywolf272@gmail.com
+$ ./spam <address_to_spam>
 ```
 ## Requirements :
 - the [quick-mailer](https://pypi.org/project/quick-mailer/) library that can be installed using pip :
