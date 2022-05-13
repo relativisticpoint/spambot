@@ -19,15 +19,17 @@ def write(fichier):
 if __name__ == "__main__":
     time.sleep(5)
     if len(sys.argv) > 1:
-        if sys.argv[1] == "fr":
-            write('sentences')
-        elif sys.argv[1] == "eng":
-            write('jokes')
-        elif sys.argv[1] == "all":
-            write('sentences')
-            write('jokes')
-            write('common')
+        if sys.argv[1] == 'fr':
+            write('french_jokes')
+        elif sys.argv[1] == 'eng':
+            write('eng_jokes')
+        elif sys.argv[1] == 'common':
+            write('common_messages')
+        elif sys.argv[1] == 'all':
+            write('eng_jokes')
+            write('common_messages')
+            write('french_jokes')
     else:
-        write('common')
-        write('jokes')
-        write('sentences')
+        write('eng_jokes')
+        write('common_messages')
+        write('french_jokes')

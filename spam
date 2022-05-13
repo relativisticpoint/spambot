@@ -1,5 +1,5 @@
 #!/bin/bash
-input="./sentences.txt"
+input="./french_jokes.txt"
 while IFS= read -r line
 do
   python3 mailbot.py "$line" $*
